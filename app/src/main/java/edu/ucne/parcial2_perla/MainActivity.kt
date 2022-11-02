@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import coil.compose.AsyncImage
 import edu.ucne.parcial2_perla.ui.theme.Parcial2_PerlaTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    AsyncImage(
+                        model = "https://example.com/image.jpg",
+                        contentDescription = null
+                    )
                 }
             }
         }
